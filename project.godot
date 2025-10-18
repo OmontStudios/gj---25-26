@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="GJ+ 25/26"
-config/features=PackedStringArray("4.3", "Mobile")
+run/main_scene="uid://bdljrp3xgrd2o"
+config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [rendering]
 
