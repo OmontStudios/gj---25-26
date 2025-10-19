@@ -27,11 +27,7 @@ scale = Vector2(1.0130814, 1.0122108)
 texture = ExtResource("1_usc5d")
 
 [node name="Player" parent="." instance=ExtResource("2_ib0os")]
-<<<<<<< HEAD
-position = Vector2(881, 569.99994)
-=======
 position = Vector2(1004, 622)
->>>>>>> 7a25553d9792d1f6cbefe6234184bd64ae04271f
 scale = Vector2(0.31999785, 0.31999785)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
