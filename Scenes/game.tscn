@@ -1,6 +1,5 @@
-[gd_scene load_steps=8 format=3 uid="uid://bdljrp3xgrd2o"]
+[gd_scene load_steps=7 format=3 uid="uid://bdljrp3xgrd2o"]
 
-[ext_resource type="PackedScene" uid="uid://dc8crmhj4rtvm" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://uiyyx6puqnbl" path="res://Sprites/Casa1.png" id="2_wrm1d"]
 [ext_resource type="Texture2D" uid="uid://dhxplxpvbclaa" path="res://Sprites/Casa2.png" id="3_3dryh"]
 [ext_resource type="Script" uid="uid://bcf3jdm6itntf" path="res://Scenes/area_2d.gd" id="4_3dryh"]
@@ -13,10 +12,6 @@ size = Vector2(159.05524, 109.539856)
 size = Vector2(1102, 93)
 
 [node name="Game" type="Node2D"]
-
-[node name="Player" parent="." instance=ExtResource("1_ebmjs")]
-position = Vector2(1245, 805.99994)
-scale = Vector2(0.4400049, 0.4400049)
 
 [node name="Casa1" type="Sprite2D" parent="."]
 show_behind_parent = true

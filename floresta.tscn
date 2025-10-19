@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://wo4hmm7flqgl"]
+
+[ext_resource type="Texture2D" uid="uid://cys1id1wjh30j" path="res://Sprites/3982b609-3b25-4784-af2b-8428b35c5622.png" id="1_6jxt7"]
+[ext_resource type="Script" uid="uid://76eemcph737i" path="res://floresta.gd" id="1_rwabt"]
+[ext_resource type="PackedScene" uid="uid://dc8crmhj4rtvm" path="res://Scenes/player.tscn" id="1_uvysk"]
+[ext_resource type="PackedScene" uid="uid://dyai7n0m3cafo" path="res://Scenes/trocador_de_cenas.tscn" id="4_rwabt"]
+
+[node name="Floresta" type="Node2D"]
+script = ExtResource("1_rwabt")
+
+[node name="FlorestaCenário" type="Sprite2D" parent="."]
+position = Vector2(956, 536)
+scale = Vector2(1.2851852, 1.2851852)
+texture = ExtResource("1_6jxt7")
+
+[node name="Player" parent="." instance=ExtResource("1_uvysk")]
+position = Vector2(1446, 975)
+scale = Vector2(0.28888112, 0.28888112)
+
+[node name="Trocador de Cenas" parent="." instance=ExtResource("4_rwabt")]
+position = Vector2(1498, 1030)
+rotation = -0.6725161
+scale = Vector2(6.648657, 3.4136963)

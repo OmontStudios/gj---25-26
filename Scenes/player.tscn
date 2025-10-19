@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dc8crmhj4rtvm"]
+[gd_scene load_steps=5 format=3 uid="uid://dc8crmhj4rtvm"]
 
 [ext_resource type="Script" uid="uid://gqg5me71foyw" path="res://Scenes/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://cy0od4ldphlpk" path="res://Sprites/Player.png" id="1_v0iea"]
+[ext_resource type="Script" uid="uid://6f58j47f07xj" path="res://Scenes/camera_2d.gd" id="3_6t5aa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cvnsp"]
 radius = 59.0
@@ -15,3 +16,6 @@ texture = ExtResource("1_v0iea")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -74)
 shape = SubResource("CircleShape2D_cvnsp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("3_6t5aa")
