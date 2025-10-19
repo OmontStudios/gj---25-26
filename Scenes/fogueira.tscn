@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1cumn5mdv6g"]
+
+[ext_resource type="Texture2D" uid="uid://b2o6bc674bato" path="res://Sprites/a.png" id="1_6n5i6"]
+[ext_resource type="Script" uid="uid://bcf3jdm6itntf" path="res://Scenes/area_2d.gd" id="2_8ppxo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cyl4i"]
+radius = 1065.0076
+
+[node name="Fogueira" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6n5i6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-223, 379, 81, 415, 341, 367, 493, 293, 547, 194, 549, -31, 526, -108, 384, -234, 153, -289, -172, -299, -370, -197, -498, -116, -580, 35, -541, 226, -424, 325)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_8ppxo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_cyl4i")
+debug_color = Color(0.99038106, 0, 0.2847311, 0.41960785)
