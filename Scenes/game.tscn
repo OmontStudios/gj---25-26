@@ -15,7 +15,7 @@ size = Vector2(1102, 93)
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_ebmjs")]
-position = Vector2(160.99994, 875)
+position = Vector2(882, 697.99994)
 scale = Vector2(0.4400049, 0.4400049)
 
 [node name="Casa1" type="Sprite2D" parent="."]

@@ -1,19 +1,15 @@
 extends CharacterBody2D
 
+@export var speed: float = 200.0
+var target_position: Vector2 = Vector2.ZERO
 
-const SPEED = 300.0
+func _ready():
+	target_position = global_position
 
-
-func _physics_process(delta: float) -> void:
-	var dir := Vector2(
-		Input.get_axis("ui_left", "ui_right"),
-		Input.get_axis("ui_up", "ui_down")
-	)
-	if dir != Vector2.ZERO:
-		dir = dir.normalized()
-		velocity = dir * SPEED
+func _physics_process(delta):
+	var direction = (target_position - global_position)
+	if direction.length() > 5.0:
+		velocity = direction.normalized() * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.y = move_toward(velocity.y, 0, SPEED)
-
+		velocity = Vector2.ZERO
 	move_and_slide()

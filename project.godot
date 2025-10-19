@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GJ+ 25/26"
-run/main_scene="uid://bdljrp3xgrd2o"
+run/main_scene="uid://c33cdwww7gfic"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
