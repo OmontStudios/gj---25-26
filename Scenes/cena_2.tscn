@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://c33cdwww7gfic"]
 
-[ext_resource type="Script" path="res://cena_2.gd" id="1_hd1ca"]
+[ext_resource type="Script" uid="uid://6ux75yofm4bh" path="res://cena_2.gd" id="1_hd1ca"]
 [ext_resource type="Texture2D" uid="uid://d2ljjnhbfvoch" path="res://Sprites/atualizado.png" id="1_ib0os"]
 [ext_resource type="Texture2D" uid="uid://h7eqinsnyj8d" path="res://Sprites/idea.png" id="1_usc5d"]
 [ext_resource type="PackedScene" uid="uid://dc8crmhj4rtvm" path="res://Scenes/player.tscn" id="2_ib0os"]
 [ext_resource type="PackedScene" uid="uid://duayl6cotty3j" path="res://npc.tscn" id="4_ib0os"]
-[ext_resource type="Script" path="res://Scenes/camera_2d.gd" id="7_bdjcv"]
+[ext_resource type="Script" uid="uid://6f58j47f07xj" path="res://Scenes/camera_2d.gd" id="7_bdjcv"]
 [ext_resource type="PackedScene" uid="uid://dyai7n0m3cafo" path="res://Scenes/trocador_de_cenas.tscn" id="8_qwo4m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bdjcv"]
