@@ -17,7 +17,7 @@ func _on_body_exited(body):
 		print("Player saiu da área")
 
 func _process(delta):
-	if player_inside and Input.is_action_just_pressed("ui_home"):
+	if player_inside and Input.is_action_just_pressed("ui_up"):
 		Dialogic.start("timeline")
 		# execute_action()  # Descomente se quiser executar a ação também
 

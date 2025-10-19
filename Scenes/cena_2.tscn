@@ -1,23 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://c33cdwww7gfic"]
+[gd_scene load_steps=7 format=3 uid="uid://c33cdwww7gfic"]
 
-[ext_resource type="Script" uid="uid://6ux75yofm4bh" path="res://cena_2.gd" id="1_hd1ca"]
-[ext_resource type="Texture2D" uid="uid://d2ljjnhbfvoch" path="res://Sprites/atualizado.png" id="1_ib0os"]
+[ext_resource type="Script" path="res://cena_2.gd" id="1_hd1ca"]
 [ext_resource type="Texture2D" uid="uid://h7eqinsnyj8d" path="res://Sprites/idea.png" id="1_usc5d"]
+[ext_resource type="PackedScene" uid="uid://dqpjaur0g6ilw" path="res://Scenes/cidade.tscn" id="2_hd1ca"]
 [ext_resource type="PackedScene" uid="uid://dc8crmhj4rtvm" path="res://Scenes/player.tscn" id="2_ib0os"]
 [ext_resource type="PackedScene" uid="uid://duayl6cotty3j" path="res://npc.tscn" id="4_ib0os"]
 [ext_resource type="PackedScene" uid="uid://dyai7n0m3cafo" path="res://Scenes/trocador_de_cenas.tscn" id="8_qwo4m"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_bdjcv"]
 
 [node name="Cena2" type="Node2D"]
 visibility_layer = 2
 script = ExtResource("1_hd1ca")
 
-[node name="Cenário" type="Sprite2D" parent="."]
-show_behind_parent = true
-position = Vector2(962, 619)
-scale = Vector2(2.0382748, 2.006909)
-texture = ExtResource("1_ib0os")
+[node name="Cidade" parent="." instance=ExtResource("2_hd1ca")]
 
 [node name="Idea" type="Sprite2D" parent="."]
 visible = false
@@ -26,18 +20,13 @@ scale = Vector2(1.0130814, 1.0122108)
 texture = ExtResource("1_usc5d")
 
 [node name="Player" parent="." instance=ExtResource("2_ib0os")]
-position = Vector2(863.0001, 522)
+position = Vector2(1043, 631)
 scale = Vector2(0.26640746, 0.26640746)
 
 [node name="NPC" parent="." instance=ExtResource("4_ib0os")]
 visible = false
 position = Vector2(1227, 405.99997)
 scale = Vector2(0.22839993, 0.22839993)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("CircleShape2D_bdjcv")
 
 [node name="Trocador de Cenas" parent="." instance=ExtResource("8_qwo4m")]
 position = Vector2(1465, 947.9999)
