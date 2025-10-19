@@ -21,3 +21,4 @@ scale = Vector2(0.28888112, 0.28888112)
 position = Vector2(1498, 1030)
 rotation = -0.6725161
 scale = Vector2(6.648657, 3.4136963)
+next_scene = "uid://c33cdwww7gfic"
