@@ -1,16 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://c33cdwww7gfic"]
+[gd_scene load_steps=9 format=3 uid="uid://c33cdwww7gfic"]
 
-[ext_resource type="Script" uid="uid://6ux75yofm4bh" path="res://cena_2.gd" id="1_hd1ca"]
+[ext_resource type="Script" path="res://cena_2.gd" id="1_hd1ca"]
 [ext_resource type="Texture2D" uid="uid://d2ljjnhbfvoch" path="res://Sprites/atualizado.png" id="1_ib0os"]
 [ext_resource type="Texture2D" uid="uid://h7eqinsnyj8d" path="res://Sprites/idea.png" id="1_usc5d"]
 [ext_resource type="PackedScene" uid="uid://dc8crmhj4rtvm" path="res://Scenes/player.tscn" id="2_ib0os"]
-[ext_resource type="Script" uid="uid://bcf3jdm6itntf" path="res://Scenes/area_2d.gd" id="3_8bmey"]
 [ext_resource type="PackedScene" uid="uid://duayl6cotty3j" path="res://npc.tscn" id="4_ib0os"]
-[ext_resource type="Script" uid="uid://6f58j47f07xj" path="res://Scenes/camera_2d.gd" id="7_bdjcv"]
+[ext_resource type="Script" path="res://Scenes/camera_2d.gd" id="7_bdjcv"]
+[ext_resource type="PackedScene" uid="uid://dyai7n0m3cafo" path="res://Scenes/trocador_de_cenas.tscn" id="8_qwo4m"]
 
-[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_bdjcv"]
-
-[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_qwo4m"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_bdjcv"]
 
 [node name="Cena2" type="Node2D"]
 visibility_layer = 2
@@ -29,29 +27,24 @@ scale = Vector2(1.0130814, 1.0122108)
 texture = ExtResource("1_usc5d")
 
 [node name="Player" parent="." instance=ExtResource("2_ib0os")]
-position = Vector2(872, 578)
+position = Vector2(1004, 622)
 scale = Vector2(0.31999785, 0.31999785)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 script = ExtResource("7_bdjcv")
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(1295, 841)
-scale = Vector2(0.31999785, 0.31999785)
-script = ExtResource("3_8bmey")
-next_scene = "uid://bdljrp3xgrd2o"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(721.87976, 471.87814)
-shape = SubResource("ConvexPolygonShape2D_bdjcv")
-debug_color = Color(0.9641985, 0, 0.4970621, 0.41960785)
-
 [node name="NPC" parent="." instance=ExtResource("4_ib0os")]
 visible = false
-position = Vector2(1227, 419)
+position = Vector2(1227, 405.99997)
 scale = Vector2(0.22839993, 0.22839993)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("ConvexPolygonShape2D_qwo4m")
+shape = SubResource("CircleShape2D_bdjcv")
+
+[node name="Trocador de Cenas" parent="." instance=ExtResource("8_qwo4m")]
+position = Vector2(1465, 947.9999)
+rotation = -0.53232545
+scale = Vector2(13.542272, 5.4790387)
+next_scene = "uid://bdljrp3xgrd2o"

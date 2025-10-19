@@ -15,7 +15,7 @@ size = Vector2(1102, 93)
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_ebmjs")]
-position = Vector2(882, 697.99994)
+position = Vector2(1245, 805.99994)
 scale = Vector2(0.4400049, 0.4400049)
 
 [node name="Casa1" type="Sprite2D" parent="."]
@@ -36,6 +36,13 @@ position = Vector2(-151.77234, 244.64825)
 rotation = 0.48869228
 scale = Vector2(0.9999999, 0.99999994)
 skew = -0.51836276
+shape = SubResource("RectangleShape2D_wowpa")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Casa2/StaticBody2D"]
+position = Vector2(-9, 250)
+rotation = -0.42760566
+scale = Vector2(0.9999999, 0.99999994)
+skew = 0.40666172
 shape = SubResource("RectangleShape2D_wowpa")
 
 [node name="Area2D" type="Area2D" parent="."]
