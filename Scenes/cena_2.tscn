@@ -1,13 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://c33cdwww7gfic"]
+[gd_scene load_steps=9 format=3 uid="uid://c33cdwww7gfic"]
 
 [ext_resource type="Script" uid="uid://6ux75yofm4bh" path="res://cena_2.gd" id="1_hd1ca"]
 [ext_resource type="Texture2D" uid="uid://d2ljjnhbfvoch" path="res://Sprites/atualizado.png" id="1_ib0os"]
 [ext_resource type="Texture2D" uid="uid://h7eqinsnyj8d" path="res://Sprites/idea.png" id="1_usc5d"]
 [ext_resource type="PackedScene" uid="uid://dc8crmhj4rtvm" path="res://Scenes/player.tscn" id="2_ib0os"]
 [ext_resource type="PackedScene" uid="uid://duayl6cotty3j" path="res://npc.tscn" id="4_ib0os"]
+[ext_resource type="Script" uid="uid://dxtahp3s5dtji" path="res://InventoryUI.gd" id="7_qwo4m"]
 [ext_resource type="PackedScene" uid="uid://dyai7n0m3cafo" path="res://Scenes/trocador_de_cenas.tscn" id="8_qwo4m"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_bdjcv"]
+[ext_resource type="Texture2D" uid="uid://b2o6bc674bato" path="res://Sprites/a.png" id="8_sc8lr"]
 
 [node name="Cena2" type="Node2D"]
 visibility_layer = 2
@@ -26,7 +26,8 @@ scale = Vector2(1.0130814, 1.0122108)
 texture = ExtResource("1_usc5d")
 
 [node name="Player" parent="." instance=ExtResource("2_ib0os")]
-position = Vector2(863.0001, 522)
+light_mask = 513
+position = Vector2(831.0001, 514.00006)
 scale = Vector2(0.26640746, 0.26640746)
 
 [node name="NPC" parent="." instance=ExtResource("4_ib0os")]
@@ -34,13 +35,24 @@ visible = false
 position = Vector2(1227, 405.99997)
 scale = Vector2(0.22839993, 0.22839993)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("CircleShape2D_bdjcv")
-
 [node name="Trocador de Cenas" parent="." instance=ExtResource("8_qwo4m")]
-position = Vector2(1465, 947.9999)
-rotation = -0.53232545
-scale = Vector2(13.542272, 5.4790387)
-next_scene = "uid://ccti0ijxqusb5"
+position = Vector2(1435, 940)
+rotation = -0.5315522
+scale = Vector2(7.0656915, 2.5522535)
+next_scene = "uid://wo4hmm7flqgl"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("7_qwo4m")
+
+[node name="Slot1" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.526
+anchor_top = 0.5
+anchor_right = 0.526
+anchor_bottom = 0.5
+offset_left = -1324.92
+offset_top = -137.0
+offset_right = -92.920044
+offset_bottom = 1095.0
+scale = Vector2(0.09398574, 0.09398574)
+texture = ExtResource("8_sc8lr")
