@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://c3u7atxlo6yvt"]
+
+[node name="Floresta" type="Node2D"]
+
+[node name="FlorestaCenário" type="Sprite2D" parent="."]
