@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://duayl6cotty3j"]
+
+[ext_resource type="Texture2D" uid="uid://0od8er3xvonk" path="res://Sprites/NPC.png" id="1_ideak"]
+[ext_resource type="Script" uid="uid://dv0lmr3jgch0v" path="res://area_2d.gd" id="2_xxcha"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xxcha"]
+radius = 59.03389
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kh24r"]
+radius = 420.0012
+
+[node name="NPC" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ideak")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -73)
+shape = SubResource("CircleShape2D_xxcha")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_xxcha")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_kh24r")
+debug_color = Color(0.9414067, 7.123351e-06, 0.6129328, 0.41960785)

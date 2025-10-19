@@ -1,10 +1,53 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdljrp3xgrd2o"]
+[gd_scene load_steps=8 format=3 uid="uid://bdljrp3xgrd2o"]
 
 [ext_resource type="PackedScene" uid="uid://dc8crmhj4rtvm" path="res://Scenes/player.tscn" id="1_ebmjs"]
+[ext_resource type="Texture2D" uid="uid://uiyyx6puqnbl" path="res://Sprites/Casa1.png" id="2_wrm1d"]
+[ext_resource type="Texture2D" uid="uid://dhxplxpvbclaa" path="res://Sprites/Casa2.png" id="3_3dryh"]
+[ext_resource type="Script" uid="uid://bcf3jdm6itntf" path="res://Scenes/area_2d.gd" id="4_3dryh"]
+[ext_resource type="PackedScene" uid="uid://duayl6cotty3j" path="res://npc.tscn" id="5_wowpa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wowpa"]
+size = Vector2(159.05524, 109.539856)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrm1d"]
+size = Vector2(1102, 93)
 
 [node name="Game" type="Node2D"]
 
-[node name="Background" type="Sprite2D" parent="."]
-
 [node name="Player" parent="." instance=ExtResource("1_ebmjs")]
-position = Vector2(1171, 496)
+position = Vector2(160.99994, 875)
+scale = Vector2(0.4400049, 0.4400049)
+
+[node name="Casa1" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(1293.9999, 205)
+scale = Vector2(0.53977275, 0.53977275)
+texture = ExtResource("2_wrm1d")
+
+[node name="Casa2" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(1658, 468)
+texture = ExtResource("3_3dryh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Casa2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Casa2/StaticBody2D"]
+position = Vector2(-151.77234, 244.64825)
+rotation = 0.48869228
+scale = Vector2(0.9999999, 0.99999994)
+skew = -0.51836276
+shape = SubResource("RectangleShape2D_wowpa")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(3, 0)
+script = ExtResource("4_3dryh")
+next_scene = "uid://c33cdwww7gfic"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(541, 36.5)
+shape = SubResource("RectangleShape2D_wrm1d")
+debug_color = Color(0.9641985, 0, 0.4970621, 0.41960785)
+
+[node name="NPC" parent="." instance=ExtResource("5_wowpa")]
+position = Vector2(1173, 583)
+scale = Vector2(0.32, 0.32)
