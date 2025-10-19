@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed: float = 200.0
+@export var speed: float = 300.0
 var target_position: Vector2 = Vector2.ZERO
 
 func _ready():
