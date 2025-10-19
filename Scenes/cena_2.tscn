@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://c33cdwww7gfic"]
+[gd_scene load_steps=8 format=3 uid="uid://c33cdwww7gfic"]
 
 [ext_resource type="Script" path="res://cena_2.gd" id="1_hd1ca"]
 [ext_resource type="Texture2D" uid="uid://h7eqinsnyj8d" path="res://Sprites/idea.png" id="1_usc5d"]
 [ext_resource type="PackedScene" uid="uid://dqpjaur0g6ilw" path="res://Scenes/cidade.tscn" id="2_hd1ca"]
 [ext_resource type="PackedScene" uid="uid://dc8crmhj4rtvm" path="res://Scenes/player.tscn" id="2_ib0os"]
 [ext_resource type="PackedScene" uid="uid://duayl6cotty3j" path="res://npc.tscn" id="4_ib0os"]
+[ext_resource type="PackedScene" uid="uid://d1cumn5mdv6g" path="res://Scenes/fogueira.tscn" id="7_bdjcv"]
 [ext_resource type="PackedScene" uid="uid://dyai7n0m3cafo" path="res://Scenes/trocador_de_cenas.tscn" id="8_qwo4m"]
 
 [node name="Cena2" type="Node2D"]
@@ -33,3 +34,7 @@ position = Vector2(1465, 947.9999)
 rotation = -0.53232545
 scale = Vector2(13.542272, 5.4790387)
 next_scene = "uid://ccti0ijxqusb5"
+
+[node name="Fogueira" parent="." instance=ExtResource("7_bdjcv")]
+position = Vector2(1216, 676)
+scale = Vector2(0.079999685, 0.079999685)
