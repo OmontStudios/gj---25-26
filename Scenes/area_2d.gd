@@ -18,9 +18,11 @@ func _on_body_exited(body):
 		print("Player saiu da área")
 
 func _process(delta):
-	if player_inside and can_interact and Input.is_action_just_pressed("ui_accept"):
+	if player_inside and Input.is_action_just_pressed("ui_accept"):
 		can_interact = false
 		Dialogic.start("Fogueira")
+		await Dialogic.timeline_ended
+		set_process_input(true)   # Reabilita as entradas
 		# execute_action()  # Descomente se quiser executar a ação também
 func execute_action():
 	print("Ação executada!")  # Substitua pela sua ação
