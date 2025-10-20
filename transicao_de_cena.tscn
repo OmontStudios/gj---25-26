@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0hjgyi8njpnf"]
+
+[ext_resource type="Script" uid="uid://btua4k21g0bri" path="res://transicao_de_cena.gd" id="1_fl2ng"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_516hg"]
+size = Vector2(235, 127)
+
+[node name="Transição de cena" type="Area2D"]
+script = ExtResource("1_fl2ng")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(117, 63)
+shape = SubResource("RectangleShape2D_516hg")
